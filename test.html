@@ -1,0 +1,143 @@
+<html><head><center>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		
+		
+
+		<script>
+			function openInNewTab(url) {
+			  var win = window.open(url, '_blank');
+			  win.focus();
+			}
+
+			function openRandomImages() {
+				var total = document.getElementsByName("number")[0].value;
+				for (var i = 0; i < total; i++) {
+					openInNewTab(generateURL());
+				}
+			}
+
+			function generateURL() {
+				return "https://www.youtube.com/watch?v=" + makeId();
+			}
+
+			function makeId() {
+			   var result = '';
+			   var characters  = 'aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ0123456789';
+			   var charactersLength = characters.length;
+			   for ( var i = 0; i < 11; i++ ) {
+			      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+			   }
+			   return result;
+			}
+		</script>
+
+
+		<style>
+			html {
+				font-family:sans-serif;
+			}
+
+			body {
+				max-width: 800px;
+			}
+
+			.small {
+				font-size: 12px;
+			}
+
+			footer {
+				color: #aaa;
+			}
+
+			/* Carbon Ads */
+
+#carbonads {
+    display: block;
+    max-width: 380px;
+    max-height: 140px;
+    padding: 4px;
+    border-radius: 8px;
+    color: black;
+}
+
+#carbonads a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#carbonads a:hover {
+    color: inherit;
+}
+
+#carbonads span {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+#carbonads .carbon-wrap {
+    display: flex;
+    background-color: yellow;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.carbon-img {
+    display: block;
+    margin: 0;
+    line-height: 1;
+}
+
+.carbon-img img {
+    display: block;
+    height: 100px;
+    width: 130px;
+    margin-bottom: 4px;
+}
+
+.carbon-text {
+    font-size: 13px;
+    padding: 10px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.carbon-poweredby {
+    display: block;
+    padding: 4px;
+    border-radius: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-weight: 600;
+    font-size: 8px;
+    color: black !important;
+}
+		</style>
+	</head>
+
+	<body>
+		
+		
+		
+		
+		
+		
+		
+
+		
+		<p id="random"><input type="number" name="number" value="5"><input type="submit" value="Go!" onclick="openRandomImages()">
+		
+
+		</p>
+		
+		
+	
+
+	
+
+</center>
+
+</body></html>
